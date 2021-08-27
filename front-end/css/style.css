@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "LettersForLearners";
+  src: url("/front-end/fonts/LettersForLearners.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  font-family: "LettersForLearners";
+  font-size: 2em;
+}
+
+body {
+  background-color: #f3e9f1;
+}
+
+header {
+  background: linear-gradient(90deg, white, #fad9f4);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px 0px 50px 50px;
+  border: 1px solid white;
+}
+
+.logo {
+  width: 200px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin: 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 40px;
+  color: #541a8b;
+  font-family: "LettersForLearners";
+  font-size: 4em;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box-article {
+  position: relative;
+}
+.box-article__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  margin: 20px;
+  border: 10px solid white;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.box-article__image:hover {
+  border: 10px solid #541a8b;
+  transition: all 1s ease-out;
+}
+.box-article__bouton {
+  background: no-repeat center url(/front-end/images/panier.png) white;
+  background-size: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.box-article__bouton:hover {
+  background: no-repeat center url(/front-end/images/panier_blanc.png) #541a8b;
+  background-size: 30px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.2s ease-out;
+  bottom: 40px;
+  right: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
