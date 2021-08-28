@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,40 +15,96 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">Produit</a>
-                </li>
-                <li>
-                    <a href="">Panier</a>
+                    <a href=""><span id="nbr-panier"></span> Panier</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Les ourses en peluche</h1>
+    <!--PAGE D'ACCUEIL-------------------------------------------------------------------------->
+        <h1 class="box-article">Les Ours en peluche</h1>
         <article>
-            <a href="">
-                <section class="box-article">
-                        <img class="box-article__image" src="/front-end/images/teddy_1.png">
-                    <div class="box-article__bouton"></div>
-                </section>
-            </a>
             <section class="box-article">
-                <img class="box-article__image" src="/front-end/images/teddy_2.png">
-                <div class="box-article__bouton"></div>
+                <img class="box-article__image article0" src="/front-end/images/teddy_1.png">
+                <div class="box-article__bouton" id="bouton-panier0"></div>
             </section>
             <section class="box-article">
-                <img class="box-article__image" src="/front-end/images/teddy_3.png">
-                <div class="box-article__bouton"></div>
+                <img class="box-article__image article1" src="/front-end/images/teddy_2.png">
+                <div class="box-article__bouton" id="bouton-panier1"></div>
             </section>
             <section class="box-article">
-                <img class="box-article__image" src="/front-end/images/teddy_4.png">
-                <div class="box-article__bouton"></div>
+                <img class="box-article__image article2" src="/front-end/images/teddy_3.png">
+                <div class="box-article__bouton" id="bouton-panier2"></div>
             </section>
             <section class="box-article">
-                <img class="box-article__image" src="/front-end/images/teddy_5.png">
-                <div class="box-article__bouton"></div>
+                <img class="box-article__image article3" src="/front-end/images/teddy_4.png">
+                <div class="box-article__bouton" id="bouton-panier3"></div>
+            </section>
+            <section class="box-article">
+                <img class="box-article__image article4" src="/front-end/images/teddy_5.png">
+                <div class="box-article__bouton" id="bouton-panier4"></div>
             </section>
         </article>
+    <!--DESCRIPTION ARTICLE--------------------------------------------------------------------->
     </main>
+    <article>
+        <section class="presentation0 none">
+            <div class="box-description">
+                <img class="box-description__image" src="/front-end/images/teddy_1.png">
+                <div class="box-description__txt">
+                    <h2>Petit Ours brun</h2>
+                    <p>
+                        Petit Ours Brun est un enfant d'environ 3 ans qui découvre son monde et grandit sous l’œil bienveillant de ses parents. Il est curieux, attachant et un peu farceur. Il vit à la campagne avec ses parents, sans frère ni sœur.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="presentation1 none">
+            <div class="box-description">
+                <img class="box-description__image" src="/front-end/images/teddy_2.png">
+                <div class="box-description__txt">
+                    <h2>Bouba</h2>
+                    <p>
+                        Ourson personnage éponyme. Il doit son nom à Moy qui l’a nommé ainsi en hommage à un grand chef de sa tribu. Têtu et bagarreur. Il échappe de peu à la mort après qu’un aigle l’a emporté dans son nid.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="presentation2 none">
+            <div class="box-description">
+                <img class="box-description__image" src="/front-end/images/teddy_3.png">
+                <div class="box-description__txt">
+                    <h2>Nounours et Oscar</h2>
+                    <p>
+                        Nounours : est l'oncle d'Oscar, conduit sur un nuage par Ulysse le marchand de sable, rend visite à Nicolas et Pimprenelle. il a eu de la fourrure toute rousse.<br>
+                        Oscar : est le neveu de Nounours. il a eu de la fourrure blanche.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="presentation3 none">
+            <div class="box-description">
+                <img class="box-description__image" src="/front-end/images/teddy_4.png">
+                <div class="box-description__txt">
+                    <h2>Winnie l'ourson</h2>
+                    <p>
+                        Winnie est un ourson jaune que le narrateur de ses aventures qualifie souvent de « peu de jugeote ». De fait, il n'est pas forcément très intelligent, mais a un grand cœur, et aide ses amis. Son péché mignon est la gourmandise, il est tout particulièrement friand de miel, ce qui lui vaudra parfois quelques soucis, auprès des abeilles entre autres.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="presentation4 none">
+            <div class="box-description">
+                <img class="box-description__image" src="/front-end/images/teddy_5.png">
+                <div class="box-description__txt">
+                    <h2>Oscar a fait des bétises</h2>
+                    <p>
+                        Oscar : est le neveu de Nounours. il a eu de la fourrure blanche.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script src="/front-end/js/main.js"></script>
 </body>
 </html>
