@@ -135,6 +135,8 @@ article{
 
 .box-description{
     display: flex;
+    animation: afficheDescription 0.5s forwards ease-in-out;
+    position: relative;
 
     &__image{
         width: 400px;
@@ -158,4 +160,42 @@ article{
     transform: translate(-50%, -50%);
     border-radius: 50px;
     z-index: -1;
+  }
+
+  @keyframes afficheDescription {
+    0% {
+        bottom: -1000px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+  }
+
+  @keyframes afficheArticle {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+  #el-accueil-1{
+    animation: afficheArticle 0.5s forwards ease-in-out;
+  }
+  #el-accueil-2{
+    animation: afficheArticle 0.7s forwards ease-in-out;
+  }
+  #el-accueil-3{
+    animation: afficheArticle 0.9s forwards ease-in-out;
+  }
+  #el-accueil-4{
+    animation: afficheArticle 1.1s forwards ease-in-out;
+  }
+  #el-accueil-5{
+    animation: afficheArticle 1.3s forwards ease-in-out;
   }
