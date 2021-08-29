@@ -2,6 +2,9 @@ const elAccueil = new Array();
 const imgArticle = new Array();
 const description = new Array();
 const mousemove = document.querySelector(".mousemove");
+const nbrPanier = document.querySelector('#nbr-panier');
+const boutonPanier = new Array();
+let i = 0;
 
 selectElAccueil ();//1
 selectImgArticle ();//1
@@ -63,9 +66,6 @@ function cursor (){
     });
 }
 //5 INCREMENTE LE PANIER QUAND CLIQUE SUR BOUTON PANIER ////////////////////////:://///////////////////////
-const nbrPanier = document.querySelector('#nbr-panier');
-const boutonPanier = new Array();
-let i = 0;
 
 function panierIncrement(){
     for(let i = 0; i < 5; i++){
