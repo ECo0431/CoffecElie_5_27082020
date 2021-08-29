@@ -1,70 +1,81 @@
-// Fait disparaitre les articles au click //////////////////////////////////////////////////////
-
-const boxArticleAll = document.querySelectorAll('.box-article__image')
-
-for (var i = 0; i < boxArticleAll.length; i++){
-
-    let boxArticle = boxArticleAll[i];
-    
-    function none(){
-        for (i = 0; i < 6 ; i++){
-            document.querySelector('.box-article').className = ('box-article, none');
-        }
-    };
-    
-    boxArticle.addEventListener('click', none);
-};
-// Affiche la presentation d'un article ////////////////////////////////////////////////////////
-let article = new Array();
-let presentation = new Array();
-
-for(let i = 0; i < 6; i++){
-    article[i] = document.querySelector('.article'+i);
-    presentation[i] = document.querySelector('.presentation'+i);
-}
-
-
-function flex(){
-    presentation[0].classList.remove('none');
-};
-article[0].addEventListener('click', flex);
-
-function flex(){
-    presentation[1].classList.remove('none');
-};
-article[1].addEventListener('click', flex);
-
-var flex = function(){
-    presentation[2].classList.remove('none');
-};
-article[2].addEventListener('click', flex);
-
-var flex = function(){
-    presentation[3].classList.remove('none');
-};
-article[3].addEventListener('click', flex);
-
-var flex = function(){
-    presentation[4].classList.remove('none');
-};
-article[4].addEventListener('click', flex);
-
-
-//Incrémentation panier1 ///////////////////////////////////////////////////////////////////////
-
+const elAccueil = new Array();
+const imgArticle = new Array();
+const description = new Array();
+const mousemove = document.querySelector(".mousemove");
 const nbrPanier = document.querySelector('#nbr-panier');
-let incrementation = 0;
-let boutonPanier = new Array();
+const boutonPanier = new Array();
+let i = 0;
 
-for(let i = 0; i < 6; i++){
-    boutonPanier[i] = document.querySelector('#bouton-panier'+i);
+selectElAccueil ();//1
+selectImgArticle ();//1
+selectDescription ()//1
+elAccueilNone ();//2
+elDesAfficher ();//3
+cursor ();//4
+panierIncrement()//5
+
+//1 SÉLÉCTION DES ID ///////////////////////////////////////////////////////////////////////////////////////
+function selectElAccueil () {  
+    for(let i = 0; i < 6; i++){
+        elAccueil[i] = document.querySelector("#el-accueil-"+i)
+    }
+};
+
+function selectImgArticle () {  
+    for(let i = 0; i < 5; i++){
+        imgArticle[i] = document.querySelector("#img-article-"+i);
+    };
+};
+
+function selectDescription () {  
+    for(let i = 0; i < 5; i++){
+        description[i] = document.querySelector("#description-"+i)
+    }
+};
+//2 RETIRE LES ÉLÉMENTS DE LA PAGE ACCUEIL AU CLIQUE SUR ARTICLE //////////////////////////////////////////
+function elAccueilNone () {
+    for(let i = 0; i < imgArticle.length; i++){
+        imgArticle[i].addEventListener("click", () => {
+            for(let i = 0; i < elAccueil.length; i++){
+                elAccueil[i].classList.add("none");
+            };
+        });
+    };
+}
+//3 AFFICHE LA DESCRIPTION APRES CLIQUE SUR ARTICLE ////////////////////////////////////////////////////////
+function elDesAfficher (){
+    for(let i = 0; i < imgArticle.length; i++){
+        imgArticle[i].addEventListener("click", () =>{
+            description[i].classList.remove("none");
+            
+        });
+    };
+};
+
+//4 CURSEUR PERSONNALISÉ //////////////////////////////////////////////////////////////////////////////////
+function cursor (){
+    window.addEventListener("mousemove", (e) =>{
+        mousemove.style.left = e.pageX + "px";
+        mousemove.style.top = e.pageY + "px";
+    });
+    window.addEventListener("mousedown", () => {
+        mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+      });     
+    window.addEventListener("mouseup", () => {
+    mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+    });
+}
+//5 INCREMENTE LE PANIER QUAND CLIQUE SUR BOUTON PANIER ////////////////////////:://///////////////////////
+function panierIncrement(){
+    for(let i = 0; i < 5; i++){
+        boutonPanier[i] = document.querySelector('#bouton-panier-'+i);
+        boutonPanier[i].addEventListener('click', () =>{
+            i++;
+            nbrPanier.innerHTML = i;
+        });
+    }
 }
 
-function fonctionI() {
-  incrementation++;
-  nbrPanier.innerHTML = incrementation;
-}
 
-for(let i = 0; i < boutonPanier.length; i++){
-    boutonPanier[i].addEventListener('click', fonctionI);
-}
+
+
