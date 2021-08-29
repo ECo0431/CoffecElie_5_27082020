@@ -1,6 +1,6 @@
 @font-face {
   font-family: "LettersForLearners";
-  src: url("./fonts/LettersForLearners.ttf");
+  src: url("../fonts/LettersForLearners.ttf");
 }
 * {
   margin: 0;
@@ -91,7 +91,7 @@ article {
   border: 10px solid #fad9f4;
 }
 .box-article__bouton {
-  background: no-repeat center url(./images/panier.png) white;
+  background: no-repeat center url(../images/panier.png) white;
   background-size: 30px;
   height: 50px;
   width: 50px;
@@ -106,7 +106,7 @@ article {
   transition: all 0.2s ease-out;
 }
 .box-article__bouton:hover {
-  background: no-repeat center url(/front-end/images/panier_blanc.png) #541a8b;
+  background: no-repeat center url(../images/panier_blanc.png) #541a8b;
   background-size: 30px;
   height: 60px;
   width: 60px;
@@ -115,7 +115,7 @@ article {
   right: 40px;
 }
 .box-article__bouton:active {
-  background: no-repeat center url(/front-end/images/panier.png) #fad9f4;
+  background: no-repeat center url(../images/panier.png) #fad9f4;
   background-size: 30px;
 }
 
