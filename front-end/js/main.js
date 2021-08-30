@@ -5,6 +5,8 @@ const mousemove = document.querySelector(".mousemove");
 const nbrPanier = document.querySelector('#nbr-panier');
 const boutonPanier = new Array();
 let i = 0;
+const form = document.querySelector("#form");
+const panier = document.querySelector("#panier");
 
 selectElAccueil ();//1
 selectImgArticle ();//1
@@ -77,6 +79,14 @@ function panierIncrement(){
     }
 }
 
+//6 LIEN PANIER /////////////////////////////:://///////////////////////
 
-
-
+panier.addEventListener("click", () =>{
+    form.classList.remove("none");
+    for(let i = 0; i < elAccueil.length; i++){
+        elAccueil[i].classList.add("none");
+    };
+    for(let i = 0; i < imgArticle.length; i++){
+        description[i].classList.add("none");          
+    };
+});
