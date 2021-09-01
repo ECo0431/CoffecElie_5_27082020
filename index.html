@@ -69,6 +69,11 @@
                     <p class="txt-form">Quantité :</p>
                     <form>
                         <select name="nom" size="1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </form>
                     <div class="box-article__bouton"></div>
@@ -95,8 +100,11 @@
                     <p class="txt-form">Quantité :</p>
                     <form>
                         <select name="nom" size="1">
-                            <option>1
-                            <option>2
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </form>
                     <div class="box-article__bouton"></div>
@@ -121,8 +129,11 @@
                     <p class="txt-form">Quantité :</p>
                     <form>
                         <select name="nom" size="1">
-                            <option>1
-                            <option>2
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </form>
                     <div class="box-article__bouton"></div>
@@ -149,8 +160,11 @@
                     <p class="txt-form">Quantité :</p>
                     <form>
                         <select name="nom" size="1">
-                            <option>1
-                            <option>2
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </form>
                     <div class="box-article__bouton"></div>
@@ -177,8 +191,11 @@
                     <p class="txt-form">Quantité :</p>
                     <form>
                         <select name="nom" size="1">
-                            <option>1
-                            <option>2
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
                     </form>
                     <div class="box-article__bouton"></div>
@@ -186,26 +203,49 @@
             </div>
         </section>
     </article>
+    <!--PANIER ------------------------------------------------------------------------------------>
     <article id="form" class="none">
         <div class="form">
-            <section>
+            <section id="article-panier-0" class="none">
                 <div class="box-article-panier">
                     <img class="box-article-panier__img" src="front-end/images/teddy_1.png">
-                    <h2 class="box-article-panier__titre">Bouba</h2>
-                    <form class="box-article-panier__form">
-                        <select name="nom" size="1">
-                            <option>Choix 1
-                            <option>Choix 2
-                        </select>
-                    </form>
-                    <form class="box-article-panier__form">
-                        <select name="nom" size="1">
-                            <option>1
-                            <option>2
-                        </select>
-                    </form>
-                    <p class="box-article-panier__prix">20€</p>
-                    <div class="box-article-panier__corbeille"></div>
+                    <h2 class="box-article-panier__titre" id="name-0-panier"></h2>
+                    <p class="box-article-panier__prix" id="prix-panier-0"></p>
+                    <div class="box-article-panier__corbeille" id="corbeille-0"></div>
+                </div>
+            </section>
+            <section id="article-panier-1" class="none">
+                <div class="box-article-panier">
+                    <img class="box-article-panier__img" src="front-end/images/teddy_2.png">
+                    <h2 class="box-article-panier__titre" id="name-1-panier"></h2>
+                    <p class="box-article-panier__prix" id="prix-panier-1"></p>
+                    <div class="box-article-panier__corbeille" id="corbeille-1"></div>
+                </div>
+            </section>
+            <section id="article-panier-2" class="none">
+                <div class="box-article-panier">
+                    <img class="box-article-panier__img" src="front-end/images/teddy_3.png">
+                    <h2 class="box-article-panier__titre" id="name-2-panier"></h2>
+                    <p class="box-article-panier__prix" id="prix-panier-2"></p>
+                    <div class="box-article-panier__corbeille" id="corbeille-2"></div>
+                </div>
+            </section>
+            <section>
+            </section>
+            <section id="article-panier-3" class="none">
+                <div class="box-article-panier">
+                    <img class="box-article-panier__img" src="front-end/images/teddy_4.png">
+                    <h2 class="box-article-panier__titre" id="name-3-panier"></h2>
+                    <p class="box-article-panier__prix" id="prix-panier-3"></p>
+                    <div class="box-article-panier__corbeille" id="corbeille-3"></div>
+                </div>
+            </section>
+            <section id="article-panier-4" class="none">
+                <div class="box-article-panier">
+                    <img class="box-article-panier__img" src="front-end/images/teddy_5.png">
+                    <h2 class="box-article-panier__titre" id="name-4-panier"></h2>
+                    <p class="box-article-panier__prix" id="prix-panier-4"></p>
+                    <div class="box-article-panier__corbeille" id="corbeille-4"></div>
                 </div>
             </section>
             <section>
@@ -237,7 +277,7 @@
                     </div>
                 </form>
             </section>
-            <button>Commander</button>
+            <button id="bouton-commander">Commander</button>
         </div>
     </article>
     <div class="mousemove"></div>

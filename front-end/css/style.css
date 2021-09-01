@@ -239,6 +239,9 @@ label {
   background: linear-gradient(90deg, white, #fad9f4);
   border-radius: 40px 40px 40px 40px;
   border: 1px solid white;
+  margin-bottom: 20px;
+  min-width: 500px;
+  justify-content: space-between;
 }
 .box-article-panier__img {
   width: 100px;
@@ -247,6 +250,7 @@ label {
 }
 .box-article-panier__titre {
   margin: 20px 40px 20px 20px;
+  font-size: 2em;
 }
 .box-article-panier__form {
   width: 200px;
