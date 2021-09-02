@@ -80,11 +80,11 @@ function cursor (){
     });
     window.addEventListener("mousedown", () => {
         mousemove.style.transform = "scale(2) translate(-25%, -25%)";
-      });     
+    });     
     window.addEventListener("mouseup", () => {
     mousemove.style.transform = "scale(1) translate(-50%, -50%)";
     });
-}
+};
 //5 INCREMENTE LE PANIER QUAND CLIQUE SUR BOUTON PANIER ////////////////////////:://///////////////////////
 
 // function panierIncrement(){
@@ -352,7 +352,7 @@ function openModal(){
 }
 
 function closeModal(){
-    document.getElementById("modal").style.top = "-1000px";
+    document.getElementById("modal").style.top = "-5000px";
 }
 
 
