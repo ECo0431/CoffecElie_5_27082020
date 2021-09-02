@@ -11,6 +11,7 @@ const corbeille = new Array();
 const articlePanier = new Array();
 const boutonPanierAcceuil = new Array();
 const btnCommander = document.querySelector("#bouton-commander");
+let iArticle0 = 1;
 
 selectElAccueil ();//1
 selectImgArticle ();//1
@@ -18,7 +19,7 @@ selectDescription ();//1
 elAccueilNone ();//2
 elDesAfficher ();//3
 cursor ();//4
-panierIncrement();//5
+// panierIncrement();//5
 ajoutNom();//9
 ajoutDescription();//10
 ajoutPrix();//11
@@ -87,15 +88,15 @@ function cursor (){
 }
 //5 INCREMENTE LE PANIER QUAND CLIQUE SUR BOUTON PANIER ////////////////////////:://///////////////////////
 
-function panierIncrement(){
-    for(let i = 0; i < 5; i++){
-        boutonPanier[i] = document.querySelector('#bouton-panier-'+i);
-        boutonPanier[i].addEventListener('click', () =>{
-            i++;
-            nbrPanier.innerHTML = i;
-        });  
-    }
-}
+// function panierIncrement(){
+//     for(let i = 0; i < 5; i++){
+//         boutonPanier[i] = document.querySelector('#bouton-panier-'+i);
+//         boutonPanier[i].addEventListener('click', () =>{
+//             i++;
+//             nbrPanier.innerHTML = i;
+//         });  
+//     }
+// }
 
 //6 LIEN PANIER ///////////////////////////////////////////////////////////////
 
@@ -274,9 +275,11 @@ function namePanier(){
 //////18 RÉCUPÈRE LES PRIX DE L'API POUR LE PANIER  /////////////////////////////////
 
 function prixPanier(){
+
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
         .then(data => document.getElementById("prix-panier-0").innerHTML = data[0].price/100+"€");
+        console.log(iArticle0)
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
         .then(data => document.getElementById("prix-panier-1").innerHTML = data[1].price/100+"€");
@@ -316,15 +319,18 @@ function supprArticlesPanier(){
     });
 }
 
-//////20 AJOUTER LA BOX DE L'ARTICLE CORRESPONDANT DANS LE PANIER AU CLICK SUR LE BOUTON PANIER  //////////////////////////////////
+//////20 AJOUTER LA BOX DE L'ARTICLE CORRESPONDANT DANS LE PANIER AU CLICK SUR LE BOUTON PANIER  ////////////////////////////////// 
 
 function ajoutArticlePanier(){
+
     for(let i = 0; i < elAccueil.length; i++){
         boutonPanierAcceuil[i] = document.querySelector("#bouton-panier-"+i);
     }
     
     boutonPanierAcceuil[0].addEventListener("click", () =>{
         articlePanier[0].classList.remove("none");
+        iArticle0++
+        console.log(iArticle0);
     });
     boutonPanierAcceuil[1].addEventListener("click", () =>{
         articlePanier[1].classList.remove("none");
@@ -347,4 +353,7 @@ function alertCommande(){
         alert("Votre commande à bien été prise en compte!\nOrinoco vous remercie :)");
     });
 }
+
+//////21 ////////////////////////////////// 
+ 
 
