@@ -32,7 +32,6 @@ namePanier();//17
 prixPanier();//18
 supprArticlesPanier();//19
 ajoutArticlePanier();//20
-alertCommande();//21
 
 
 //1 SÉLÉCTION DES ID ///////////////////////////////////////////////////////////////////////////////////////
@@ -348,11 +347,14 @@ function ajoutArticlePanier(){
 
 //////21 ALERT APRÈS CLIQUE SUR LE BOUTON COMMANDER  //////////////////////////////////
 
-function alertCommande(){
-    btnCommander.addEventListener("click", () =>{
-        alert("Votre commande à bien été prise en compte!\nOrinoco vous remercie :)");
-    });
+function openModal(){
+    document.getElementById("modal").style.top = "0px";
 }
+
+function closeModal(){
+    document.getElementById("modal").style.top = "-1000px";
+}
+
 
 //////21 ////////////////////////////////// 
  

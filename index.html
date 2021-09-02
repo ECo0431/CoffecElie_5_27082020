@@ -277,7 +277,14 @@
                     </div>
                 </form>
             </section>
-            <button id="bouton-commander">Commander</button>
+            <div class="button-container" id="bouton-commander">
+                <button id="button-modal" onclick="openModal()">Commander</button>
+            </div>
+            <div id="modal">
+                <img class="logo-commande" alt="logo orinoco" src="front-end/images/logo.png">
+                <h1>Vous remercie d'avoir passé commande !</h1>
+                <button id="close" onclick="closeModal()">Revenir sur le site</button>
+            </div>
         </div>
     </article>
     <div class="mousemove"></div>
