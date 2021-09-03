@@ -11,7 +11,12 @@ const corbeille = new Array();
 const articlePanier = new Array();
 const boutonPanierAcceuil = new Array();
 const btnCommander = document.querySelector("#bouton-commander");
-let iArticle0 = 1;
+let iArticle0 = 0;
+let iArticle1 = 0;
+let iArticle2 = 0;
+let iArticle3 = 0;
+let iArticle4 = 0;
+
 
 selectElAccueil ();//1
 selectImgArticle ();//1
@@ -19,7 +24,11 @@ selectDescription ();//1
 elAccueilNone ();//2
 elDesAfficher ();//3
 cursor ();//4
-// panierIncrement();//5
+panierIncrement0();//5
+panierIncrement1();
+panierIncrement2();
+panierIncrement3();
+panierIncrement4();
 ajoutNom();//9
 ajoutDescription();//10
 ajoutPrix();//11
@@ -29,7 +38,11 @@ couleurArticle2();//14
 couleurArticle3();//15
 couleurArticle4();//16
 namePanier();//17
-prixPanier();//18
+prixPanier0();//18
+prixPanier1();
+prixPanier2();
+prixPanier3();
+prixPanier4();
 supprArticlesPanier();//19
 ajoutArticlePanier();//20
 
@@ -87,15 +100,47 @@ function cursor (){
 };
 //5 INCREMENTE LE PANIER QUAND CLIQUE SUR BOUTON PANIER ////////////////////////:://///////////////////////
 
-// function panierIncrement(){
-//     for(let i = 0; i < 5; i++){
-//         boutonPanier[i] = document.querySelector('#bouton-panier-'+i);
-//         boutonPanier[i].addEventListener('click', () =>{
-//             i++;
-//             nbrPanier.innerHTML = i;
-//         });  
-//     }
-// }
+function panierIncrement0(){
+        boutonPanier[0] = document.querySelector('#bouton-panier-0');
+        boutonPanier[0].addEventListener('click', () =>{
+            i++;
+            nbrPanier.innerHTML = i;
+            prixPanier0();
+        });  
+};
+function panierIncrement1(){
+    boutonPanier[1] = document.querySelector('#bouton-panier-1');
+    boutonPanier[1].addEventListener('click', () =>{
+        i++;
+        nbrPanier.innerHTML = i;
+        prixPanier1();
+    });  
+};
+function panierIncrement2(){
+    boutonPanier[2] = document.querySelector('#bouton-panier-2');
+    boutonPanier[2].addEventListener('click', () =>{
+        i++;
+        nbrPanier.innerHTML = i;
+        prixPanier2();
+    });  
+};
+function panierIncrement3(){
+    boutonPanier[3] = document.querySelector('#bouton-panier-3');
+    boutonPanier[3].addEventListener('click', () =>{
+        i++;
+        nbrPanier.innerHTML = i;
+        prixPanier3();
+    });  
+};
+function panierIncrement4(){
+    boutonPanier[4] = document.querySelector('#bouton-panier-4');
+    boutonPanier[4].addEventListener('click', () =>{
+        i++;
+        nbrPanier.innerHTML = i;
+        prixPanier4();
+    });  
+};
+
 
 //6 LIEN PANIER ///////////////////////////////////////////////////////////////
 
@@ -273,25 +318,45 @@ function namePanier(){
 
 //////18 RÉCUPÈRE LES PRIX DE L'API POUR LE PANIER  /////////////////////////////////
 
-function prixPanier(){
+function prixPanier0(){
+    fetch('http://localhost:3000/api/teddies')
+        .then(response => response.json())
+        .then(data => {
+        document.getElementById("prix-panier-0").innerHTML = data[0].price/100*iArticle0+"€";
+        });
+};
 
+function prixPanier1(){
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
-        .then(data => document.getElementById("prix-panier-0").innerHTML = data[0].price/100+"€");
-        console.log(iArticle0)
+        .then(data => {
+        document.getElementById("prix-panier-1").innerHTML = data[1].price/100*iArticle1+"€";
+        });
+};
+
+function prixPanier2(){
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
-        .then(data => document.getElementById("prix-panier-1").innerHTML = data[1].price/100+"€");
+        .then(data => {
+        document.getElementById("prix-panier-2").innerHTML = data[2].price/100*iArticle2+"€";
+        });
+};
+
+function prixPanier3(){
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
-        .then(data => document.getElementById("prix-panier-2").innerHTML = data[2].price/100+"€");
+        .then(data => {
+        document.getElementById("prix-panier-3").innerHTML = data[3].price/100*iArticle3+"€";
+        });
+};
+
+function prixPanier4(){
     fetch('http://localhost:3000/api/teddies')
         .then(response => response.json())
-        .then(data => document.getElementById("prix-panier-3").innerHTML = data[3].price/100+"€");
-    fetch('http://localhost:3000/api/teddies')
-        .then(response => response.json())
-        .then(data => document.getElementById("prix-panier-4").innerHTML = data[4].price/100+"€");
-}
+        .then(data => {
+        document.getElementById("prix-panier-4").innerHTML = data[4].price/100*iArticle4+"€";
+        });
+};
 
 //////19 SUPPRIME LES ARTICLES DU PANIER  //////////////////////////////////////////////////
 
@@ -328,19 +393,22 @@ function ajoutArticlePanier(){
     
     boutonPanierAcceuil[0].addEventListener("click", () =>{
         articlePanier[0].classList.remove("none");
-        iArticle0++
-        console.log(iArticle0);
+        iArticle0++;
     });
     boutonPanierAcceuil[1].addEventListener("click", () =>{
+        iArticle1++;
         articlePanier[1].classList.remove("none");
     });
     boutonPanierAcceuil[2].addEventListener("click", () =>{
+        iArticle2++;
         articlePanier[2].classList.remove("none");
     });
     boutonPanierAcceuil[3].addEventListener("click", () =>{
+        iArticle3++;
         articlePanier[3].classList.remove("none");
     });
     boutonPanierAcceuil[4].addEventListener("click", () =>{
+        iArticle4++;
         articlePanier[4].classList.remove("none");
     });
 };
@@ -357,5 +425,3 @@ function closeModal(){
 
 
 //////21 ////////////////////////////////// 
- 
-
